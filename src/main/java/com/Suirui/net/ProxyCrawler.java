@@ -20,7 +20,7 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
-import org.junit.experimental.theories.Theories;
+
 
 import com.google.common.base.CaseFormat;
 
@@ -39,9 +39,9 @@ public String filePath;
 	 * @param crawlPath exp->/sharon/crawler/pCrawler
 	 *            crawlPath is the path of the directory which maintains
 	 *            information of this crawler
-	 * @param autoParse
-	 *            if autoParse is true,BreadthCrawler will auto extract links
-	 *            which match regex rules from pag
+	 * @param seedsURL
+	 *
+	 * @param regexs
 	 */
 	public ProxyCrawler(String crawlPath,List<String>seedsURL,List<String>regexs) {
 		

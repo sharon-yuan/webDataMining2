@@ -30,7 +30,7 @@ public class HttpRequesterImpl implements HttpRequester {
     public static final Logger LOG = LoggerFactory.getLogger(HttpRequesterImpl.class);
     protected RequestConfig requestConfig = RequestConfig.createDefaultRequestConfig();;
 
-    @Override
+
     public HttpResponse getResponse(String url) throws Exception {
         HttpRequest request = new HttpRequest(url, requestConfig);
         return request.getResponse();

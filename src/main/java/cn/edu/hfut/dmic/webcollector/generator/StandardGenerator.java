@@ -54,7 +54,7 @@ public class StandardGenerator implements Generator {
     public DatabaseEntry key = new DatabaseEntry();
     public DatabaseEntry value = new DatabaseEntry();
 
-    @Override
+
     public CrawlDatum next() {
         if(topN!=null){
             if(totalGenerate>=topN){

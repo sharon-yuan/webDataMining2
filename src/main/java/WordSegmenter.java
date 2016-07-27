@@ -161,8 +161,8 @@ public class WordSegmenter {
         float total=(float)Runtime.getRuntime().totalMemory()/1000000;
         float free=(float)Runtime.getRuntime().freeMemory()/1000000;
         String pre="鎵ц涔嬪墠鍓╀綑鍐呭瓨:"+max+"-"+total+"+"+free+"="+(max-total+free);
-        try(BufferedReader reader = new BufferedReader(new InputStreamReader(new FileInputStream(input),"utf-8"));
-                BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(output),"utf-8"))){
+        BufferedReader reader = new BufferedReader(new InputStreamReader(new FileInputStream(input),"utf-8"));
+                BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(output),"utf-8"))
             long size = Files.size(input.toPath());
             LOGGER.info("size:"+size);
             LOGGER.info("鏂囦欢澶у皬锛�"+(float)size/1024/1024+" MB");
@@ -200,7 +200,7 @@ public class WordSegmenter {
             if(cost!=0)
             rate = textLength/cost;
            
-        }
+
         max=(float)Runtime.getRuntime().maxMemory()/1000000;
         total=(float)Runtime.getRuntime().totalMemory()/1000000;
         free=(float)Runtime.getRuntime().freeMemory()/1000000;
